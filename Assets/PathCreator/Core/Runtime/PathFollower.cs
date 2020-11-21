@@ -25,7 +25,7 @@ namespace PathCreation
         public DoorAnimation1 door1;
         public StepAnimation step;
 
-        public static float yExtraHeight = .9f;
+        public static float yExtraHeight = 1.9f;
         public static Vector3 heightOfCart = new Vector3(0, yExtraHeight, 0);
         public static float initialRotation = 90;
 
