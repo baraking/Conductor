@@ -15,8 +15,7 @@ public class WizardSpawner : MonoBehaviour
         innerClock = 0;
         for (int i = 0; i < startingAmountOfWizards; i++)
         {
-            var newTarget = Instantiate(wizardPrefab, transform.position, Quaternion.identity);
-            newTarget.transform.SetParent(transform.parent, false);
+            Instantiate(wizardPrefab, transform.position, Quaternion.identity);
         }
     }
 
@@ -26,8 +25,7 @@ public class WizardSpawner : MonoBehaviour
         if (innerClock >= timeToNextSpawn)
         {
             innerClock = 0;
-            var newTarget = Instantiate(wizardPrefab, transform.position, Quaternion.identity);
-            newTarget.transform.SetParent(transform.parent, false);
+            Instantiate(wizardPrefab, transform.position, Quaternion.identity);
         }
     }
 

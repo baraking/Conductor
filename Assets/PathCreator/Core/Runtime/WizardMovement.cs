@@ -41,7 +41,6 @@ public class WizardMovement : MonoBehaviour
                 }
                 if (distanceToTarget < Constants.DistanceToTarget || curTarget == Vector3.zero || curTarget == null)
                 {
-                    transform.SetParent(possibleTargets.transform.parent.transform.parent, true);
                     FindNewTarget();
                 }
             }
@@ -70,11 +69,5 @@ public class WizardMovement : MonoBehaviour
             }
             //transform.parent = possibleTargets.transform.GetChild(random).GetComponent<target>().parentHolder.transform;
         }
-    }
-
-    public void SetNewParent()
-    {
-        int random = Random.Range(0, possibleTargets.transform.childCount);
-        transform.SetParent(possibleTargets.transform.GetChild(random).GetComponent<target>().parentHolder.transform, true);
     }
 }
